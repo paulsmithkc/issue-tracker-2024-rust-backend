@@ -10,4 +10,5 @@ Tools:
 
 - [rust](https://www.rust-lang.org/)
 - [cargo lambda](https://www.cargo-lambda.info/)
-- [dynamodb](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html)
+- [aws lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
+- [aws dynamodb](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html)
