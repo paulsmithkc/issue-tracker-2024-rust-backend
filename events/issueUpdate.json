@@ -1,0 +1,15 @@
+{
+  "httpMethod": "POST",
+  "path": "/issue/60abb47c-d869-495c-ba9b-08d3514f2b76",
+  "requestContext": {
+    "httpMethod": "POST",
+    "path": "/issue/60abb47c-d869-495c-ba9b-08d3514f2b76",
+    "routeKey": "POST /issue/{slug}"
+  },
+  "pathParameters": {
+    "slug": "60abb47c-d869-495c-ba9b-08d3514f2b76"
+  },
+  "headers": { "Content-Type": "application/json" },
+  "isBase64Encoded": false,
+  "body": "{\"id\":\"60abb47c-d869-495c-ba9b-08d3514f2b76\",\"title\":\"updated title\",\"description\":\"updated description\",\"created_at\":\"2024-10-30T22:11:52.182Z\"}"
+}

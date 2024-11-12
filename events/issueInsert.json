@@ -1,0 +1,15 @@
+{
+  "httpMethod": "POST",
+  "path": "/issue/new",
+  "requestContext": {
+    "httpMethod": "POST",
+    "path": "/issue/{slug}",
+    "routeKey": "GET /issue/new"
+  },
+  "pathParameters": {
+    "slug": "60abb47c-d869-495c-ba9b-08d3514f2b75"
+  },
+  "headers": { "Content-Type": "application/json" },
+  "isBase64Encoded": false,
+  "body": "{\"id\":\"60abb47c-d869-495c-ba9b-08d3514f2b76\",\"title\":\"new title\",\"description\":\"new description\",\"created_at\":\"2024-10-30T22:11:52.182Z\"}"
+}

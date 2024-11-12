@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "issue-tracker-2024-rust-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "cargo:build": "cargo lambda build",
+    "cargo:dev": "cargo lambda watch --env-file .env",
+    "curl:health-check": "curl http://localhost:9000/healthCheck",
+    "curl:issue-list": "curl http://localhost:9000/issue/list",
+    "health-check": "cargo lambda invoke -F events/healthCheck.json",
+    "issue-list": "cargo lambda invoke -F events/issueList.json",
+    "issue-get": "cargo lambda invoke -F events/issueGet.json",
+    "issue-insert": "cargo lambda invoke -F events/issueInsert.json",
+    "issue-update": "cargo lambda invoke -F events/issueUpdate.json",
+    "issue-delete": "cargo lambda invoke -F events/issueDelete.json"
+  }
+}

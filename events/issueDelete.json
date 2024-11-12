@@ -1,0 +1,12 @@
+{
+  "httpMethod": "DELETE",
+  "path": "/issue/60abb47c-d869-495c-ba9b-08d3514f2b76",
+  "requestContext": {
+    "httpMethod": "DELETE",
+    "path": "/issue/60abb47c-d869-495c-ba9b-08d3514f2b76",
+    "routeKey": "DELETE /issue/{slug}"
+  },
+  "pathParameters": {
+    "slug": "60abb47c-d869-495c-ba9b-08d3514f2b76"
+  }
+}

@@ -1,0 +1,67 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  issue-tracker-aws-rust
+
+  AWS Serverless backend for issue tracker built with Rust
+
+Globals:
+  Function:
+    Timeout: 3
+    MemorySize: 128
+
+Resources:
+  IssueApiFunction:
+    Type: AWS::Serverless::Function
+    Metadata:
+      BuildMethod: rust-cargolambda
+    Properties:
+      CodeUri: ./
+      Handler: bootstrap
+      Runtime: provided.al2023
+      Architectures:
+        - x86_64
+      Events:
+        HealthCheck:
+          Type: Api
+          Properties:
+            Path: /healthCheck
+            Method: get
+        ListIssues:
+          Type: Api
+          Properties:
+            Path: /issue/list
+            Method: get
+        InsertIssue:
+          Type: Api
+          Properties:
+            Path: /issue/new
+            Method: post
+        GetIssue:
+          Type: Api
+          Properties:
+            Path: /issue/{slug}
+            Method: get
+        UpdateIssue:
+          Type: Api
+          Properties:
+            Path: /issue/{slug}
+            Method: post
+        DeleteIssue:
+          Type: Api
+          Properties:
+            Path: /issue/{slug}
+            Method: delete
+  IssuesTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: issues
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: S
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
